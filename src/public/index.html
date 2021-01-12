@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>学习</title>
+  </head>
+  <body>
+
+    
+
+
+
+
+
+    <!--================resize 控制大小=================== -->
+    <!-- <style>
+      #img_box {
+        width: 300px;
+        resize: both;
+        overflow: hidden;
+      }
+      #img_box img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <div id="img_box">
+      <img
+        src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1819216937,2118754409&fm=26&gp=0.jpg"
+        alt="img"
+      />
+    </div> -->
+    <!--=========================================== -->
+    <!--================插入10万条数据==================== -->
+
+    <!-- <ul id="ulEl"></ul> -->
+
+    <script>
+      // const total = 10000000
+
+      // const once = 20
+
+      // const loopCount = Math.ceil(total / once)
+
+      // let countRender = 0
+
+      // let AnimationId = 0
+
+      // function add() {
+      //   const fragEl = document.createDocumentFragment()
+      //   for (let i = 0; i < once; i++) {
+      //     const li = document.createElement('li')
+      //     li.innerHTML = Math.floor(Math.random() * total)
+      //     fragEl.appendChild(li)
+      //   }
+      //   ulEl.appendChild(fragEl)
+      //   countRender++
+      //   loop()
+      // }
+
+      // function loop() {
+      //   if (countRender < loopCount) {
+      //     AnimationId = window.requestAnimationFrame(add)
+      //   }else{
+      //     window.cancelAnimationFrame(AnimationId)
+      //   }
+      // }
+
+      // loop()
+    </script>
+
+    <!--================================================== -->
+
+    <!--================vue 3.0 数据双向绑定==================== -->
+    <!-- 数据:<span id="spanName"></span>
+    <br>
+    <input type="text" id="inputName"> -->
+
+    <script>
+      // let obj = {}
+
+      // obj = new Proxy(obj,{
+      //   get(targer,prop){
+      //     return targer[prop]
+      //   },
+      //   set(targer,prop,value){
+      //     targer[prop] = value
+      //     observer()
+      //   }
+      // })
+
+      // function observer(){
+      //   spanName.innerHTML = obj.name
+      //   inputName.value = obj.name
+      // }
+      // observer()
+
+      // setTimeout(() => {
+      //   obj.name = "chad"
+      // }, 1000);
+
+      // inputName.oninput = function(){
+      //   obj.name = this.value
+      // }
+    </script>
+    <!-- ========================================================= -->
+
+    <!--================vue 2.0 数据双向绑定==================== -->
+    <!-- 数据:<span id="spanName"></span>
+    <br>
+    <input type="text" id="inputName"> -->
+
+    <script>
+      // let obj = {
+      //   name:''
+      // }
+
+      // let virtualDom = JSON.parse(JSON.stringify(obj))
+
+      // Object.defineProperty(obj,"name",{
+      //   get(){
+      //     return virtualDom.name
+      //   },
+      //   set(val){
+      //     virtualDom.name = val
+      //     observer()
+      //   }
+      // })
+      // function observer(){
+      //   spanName.innerHTML = obj.name
+      //   inputName.value = obj.name
+      // }
+      // observer()
+
+      // inputName.oninput = function(){
+      //   obj.name = this.value
+      // }
+
+      // setTimeout(() => {
+      //   obj.name = "chad"
+      // }, 1000);
+    </script>
+    <!-- ========================================================= -->
+
+    <script>
+      //================if (a == 1 && a == 2 && a == 3) 成立的方法====================
+      // 方案1 重写toString方法
+      // let a = {
+      //   i: 1,
+      //   toString() {
+      //     return this.i++
+      //   },
+      // }
+
+      //  方案2 利用Object.defineProperty 监听 window上的a属性 ，重写get 方法
+      // var i = 1
+
+      // Object.defineProperty(window, 'a', {
+      //   get() {
+      //     return i++
+      //   },
+      // })
+
+      // if (a == 1 && a == 2 && a == 3) {
+      //   console.log('条件成立')
+      // }
+      //============================================================================
+    </script>
+  </body>
+</html>
